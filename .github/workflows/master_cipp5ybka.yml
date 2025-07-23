@@ -14,7 +14,7 @@ env:
 
 jobs:
   deploy:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
     permissions:
       id-token: write #This is required for requesting the JWT
       contents: read #This is required for actions/checkout
@@ -26,9 +26,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_17BCC0F05D724108B5D6A616878D7400 }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_DC51039C1F8B454CB24A5578769C105B }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_DD7CA4ACDB0246B38974DFD81E98165F }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_763F3AE61CA04D24A60701BEE1D91A34 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_E99A34A556C64118B2DDB589C639603F }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1AD2B233D7F34C518181C166A2A108F9 }}
 
       - name: 'Run Azure Functions Action'
         uses: Azure/functions-action@v1
